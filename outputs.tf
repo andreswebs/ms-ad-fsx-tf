@@ -8,8 +8,10 @@ output "directory" {
 
 output "file_system" {
   value = {
-    id                       = aws_fsx_windows_file_system.this.id
-    arn                      = aws_fsx_windows_file_system.this.arn
-    preferred_file_server_ip = aws_fsx_windows_file_system.this.preferred_file_server_ip
+    id                             = aws_fsx_windows_file_system.this.id
+    arn                            = aws_fsx_windows_file_system.this.arn
+    preferred_file_server_ip       = aws_fsx_windows_file_system.this.preferred_file_server_ip
+    dns_name                       = aws_fsx_windows_file_system.this.dns_name
+    remote_administration_endpoint = aws_fsx_windows_file_system.this.remote_administration_endpoint
   }
 }

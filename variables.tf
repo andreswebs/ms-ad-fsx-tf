@@ -10,7 +10,7 @@ variable "subnet_ids" {
   type = list(string)
 }
 
-variable "ssm_parameter_name" {
+variable "ad_password_ssm_parameter_name" {
   type = string
 }
 

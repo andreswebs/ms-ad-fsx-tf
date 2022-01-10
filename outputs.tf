@@ -1,17 +1,18 @@
 output "directory" {
+  sensitive = true
   value = {
-    id                = aws_directory_service_directory.this.id
-    dns_ip_addresses  = aws_directory_service_directory.this.dns_ip_addresses
-    security_group_id = aws_directory_service_directory.this.security_group_id
+    id                = module.fsx.directory.id
+    dns_ip_addresses  = module.fsx.directory.dns_ip_addresses
+    security_group_id = module.fsx.directory.security_group_id
   }
 }
 
 output "file_system" {
   value = {
-    id                             = aws_fsx_windows_file_system.this.id
-    arn                            = aws_fsx_windows_file_system.this.arn
-    preferred_file_server_ip       = aws_fsx_windows_file_system.this.preferred_file_server_ip
-    dns_name                       = aws_fsx_windows_file_system.this.dns_name
-    remote_administration_endpoint = aws_fsx_windows_file_system.this.remote_administration_endpoint
+    id                             = module.fsx.file_system.id
+    arn                            = module.fsx.file_system.arn
+    preferred_file_server_ip       = module.fsx.file_system.preferred_file_server_ip
+    dns_name                       = module.fsx.file_system.dns_name
+    remote_administration_endpoint = module.fsx.file_system.remote_administration_endpoint
   }
 }

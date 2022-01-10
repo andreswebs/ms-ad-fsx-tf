@@ -1,9 +1,9 @@
 output "directory" {
-  sensitive = true
   value = {
-    id                = module.fsx.directory.id
-    dns_ip_addresses  = module.fsx.directory.dns_ip_addresses
-    security_group_id = module.fsx.directory.security_group_id
+    name              = module.fsx.directory_info.name
+    id                = module.fsx.directory_info.id
+    dns_ip_addresses  = module.fsx.directory_info.dns_ip_addresses
+    security_group_id = module.fsx.directory_info.security_group_id
   }
 }
 

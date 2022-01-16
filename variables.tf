@@ -11,7 +11,8 @@ variable "subnet_ids" {
 }
 
 variable "ad_password_ssm_parameter_name" {
-  type = string
+  type    = string
+  default = "/ad/password"
 }
 
 variable "kms_key_deletion_window_in_days" {

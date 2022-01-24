@@ -10,9 +10,9 @@ variable "subnet_ids" {
   type = list(string)
 }
 
-variable "ad_password_ssm_parameter_name" {
+variable "ad_ssm_prefix" {
   type    = string
-  default = "/ad/password"
+  default = "/ad"
 }
 
 variable "kms_key_deletion_window_in_days" {

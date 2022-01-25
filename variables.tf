@@ -15,6 +15,11 @@ variable "ad_ssm_prefix" {
   default = "/ad"
 }
 
+variable "fsx_ssm_prefix" {
+  type    = string
+  default = "/fsx"
+}
+
 variable "kms_key_deletion_window_in_days" {
   type        = number
   description = "KMS key deletion window in days"
